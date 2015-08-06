@@ -1,0 +1,24 @@
+<html>
+<head>
+	<script language="JavaScript" type="text/javascript" src="core.js"></script>
+	<script language="JavaScript" type="text/javascript" src="spritesheet.js"></script>
+	<script language="JavaScript" type="text/javascript">
+	var testSprite = new SpriteSheetClass();
+	testSprite.load("./grits_effects.png");
+
+	var xobj = new XMLHttpRequest();
+        xobj.overrideMimeType("application/json");
+    xobj.open('GET', 'grits_effects.json', true); // Replace 'my_data' with the path to your file
+    xobj.onreadystatechange = function () {
+          if (xobj.readyState == 4 && xobj.status == "200") {
+            // Required use of an anonymous callback as .open will NOT return a value but simply returns undefined in asynchronous mode
+            testSprite.parseAtlasDefinition(xobj.responseText);
+            drawSprite("chaingun.png", 100, 100);
+          }
+    };
+    xobj.send(null);
+	</script>
+</head>
+<body id='body'>
+</body>
+</html>
