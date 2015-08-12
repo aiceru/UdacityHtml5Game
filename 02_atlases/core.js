@@ -1,3 +1,7 @@
+//
+// Helper file with various definitions for our Class object.
+// You don't have to modify anything in here.
+//
 
 
 Array.prototype.erase = function (item) {
@@ -166,4 +170,3 @@ newGuid_short = function () {
 	return (S4()).toString();
 };
 
-	
