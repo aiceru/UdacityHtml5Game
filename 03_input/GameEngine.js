@@ -138,4 +138,6 @@ GameEngineClass = Class.extend({
 
 gGameEngine = new GameEngineClass();
 
-gGameEngine.setup();
+var start = function() {
+	gGameEngine.setup();
+}

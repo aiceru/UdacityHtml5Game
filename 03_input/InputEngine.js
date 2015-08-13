@@ -36,6 +36,7 @@ InputEngineClass = Class.extend({
 	onMouseMove: function (event) {
 		gInputEngine.mouse.x = event.clientX;
 		gInputEngine.mouse.y = event.clientY;
+		console.log(event.clientX, event.clientY);
 	},
 
 	//-----------------------------
@@ -46,6 +47,7 @@ InputEngineClass = Class.extend({
 		// 
 		// You'll need to use the bindings object you set in 'bind'
 		// in order to do this.
+		console.log(event);
 		var action = gInputEngine.bindings[event.keyID];
 
 		if (action) {
